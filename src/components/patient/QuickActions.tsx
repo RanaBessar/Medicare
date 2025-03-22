@@ -12,7 +12,11 @@ interface QuickAction {
     icon: React.ReactNode;
 }
 
-const QuickActions: React.FC = () => {
+interface QuickActionsProps {
+    mobileView?: boolean;
+}
+
+const QuickActions: React.FC<QuickActionsProps> = ({ mobileView = false }) => {
     const { mode } = useThemeContext();
     const [activeAction, setActiveAction] = useState<string | null>(null);
 

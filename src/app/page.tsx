@@ -412,7 +412,7 @@ const LandingPage = () => {
 
                 <div className={styles['learn-more-container']}>
                     <Link href="#" passHref>
-                        <button className={styles['learn-more-btn']}>Learn more</button>
+                        <Button className={styles['learn-more-btn']}>Learn more</Button>
                     </Link>
                 </div>
             </section>
