@@ -168,15 +168,15 @@ const Calendar: React.FC<CalendarProps> = ({ mobileView = false }) => {
                 flexDirection: { xs: mobileView ? 'column' : 'row', sm: 'row' },
                 gap: { xs: mobileView ? 1.5 : 0, sm: 0 }
             }}>
-                <Typography
-                    variant="h6"
-                    sx={{
+                    <Typography
+                        variant="h6"
+                        sx={{
                         position: 'relative',
                         fontFamily: 'poppins',
                         color: mode === 'light' ? '#000000' : '#FFFFFF',
-                        fontWeight: 600,
+                            fontWeight: 600,
                         fontSize: { xs: '1.1rem', sm: '1.2rem', md: '1.25rem' },
-                        pb: 0.5,
+                            pb: 0.5,
                         width: mobileView ? { xs: '100%', sm: 'auto' } : 'auto',
                         '&:after': {
                             content: '""',
@@ -188,10 +188,10 @@ const Calendar: React.FC<CalendarProps> = ({ mobileView = false }) => {
                             backgroundColor: '#217C99',
                             borderRadius: '5px 5px 0 0'
                         }
-                    }}
-                >
-                    Calendar
-                </Typography>
+                        }}
+                    >
+                        Calendar
+                    </Typography>
 
                 <Button
                     variant="contained"
@@ -231,20 +231,20 @@ const Calendar: React.FC<CalendarProps> = ({ mobileView = false }) => {
                     p: { xs: 0.3, sm: 0.4, md: 0.5 },
                 }}
             >
-                <IconButton
+                        <IconButton
                     onClick={() => changeMonth(-1)}
-                    sx={{
+                            sx={{
                         color: mode === 'light' ? '#21647D' : '#B8C7CC',
                         p: { xs: 0.7, sm: 1 },
-                        '&:hover': {
+                                '&:hover': {
                             backgroundColor: mode === 'light' ? 'rgba(33, 100, 125, 0.08)' : 'rgba(184, 199, 204, 0.08)',
-                        },
-                    }}
-                >
+                                },
+                            }}
+                        >
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M15 18L9 12L15 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                </IconButton>
+                            </svg>
+                        </IconButton>
 
                 <Typography
                     variant="h6"
@@ -258,38 +258,38 @@ const Calendar: React.FC<CalendarProps> = ({ mobileView = false }) => {
                     {getMonthAndYear()}
                 </Typography>
 
-                <IconButton
+                        <IconButton
                     onClick={() => changeMonth(1)}
-                    sx={{
+                            sx={{
                         color: mode === 'light' ? '#21647D' : '#B8C7CC',
                         p: { xs: 0.7, sm: 1 },
-                        '&:hover': {
+                                '&:hover': {
                             backgroundColor: mode === 'light' ? 'rgba(33, 100, 125, 0.08)' : 'rgba(184, 199, 204, 0.08)',
-                        },
-                    }}
-                >
+                                },
+                            }}
+                        >
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                </IconButton>
+                            </svg>
+                        </IconButton>
             </Box>
 
             {/* Days of the Week */}
             <Grid container spacing={0.5} sx={{ mb: 1 }}>
                 {DAYS_OF_WEEK.map((day) => (
                     <Grid item xs={12 / 7} key={day}>
-                        <Typography
+                            <Typography
                             align="center"
-                            sx={{
+                                sx={{
                                 fontFamily: 'poppins',
                                 fontWeight: 500,
                                 fontSize: { xs: '0.65rem', sm: '0.7rem', md: '0.75rem' },
                                 color: mode === 'light' ? '#6C7A89' : '#888',
                                 textTransform: 'uppercase',
-                            }}
-                        >
-                            {day}
-                        </Typography>
+                                }}
+                            >
+                                {day}
+                            </Typography>
                     </Grid>
                 ))}
             </Grid>
@@ -320,7 +320,7 @@ const Calendar: React.FC<CalendarProps> = ({ mobileView = false }) => {
                                 cursor: date ? 'pointer' : 'default',
                                 backgroundColor: isSelected(date)
                                     ? '#E16A8A'
-                                    : isToday(date)
+                                        : isToday(date)
                                         ? mode === 'light' ? 'rgba(225, 106, 138, 0.1)' : 'rgba(225, 106, 138, 0.15)'
                                     : 'transparent',
                                 color: isSelected(date)
@@ -376,7 +376,7 @@ const Calendar: React.FC<CalendarProps> = ({ mobileView = false }) => {
                         </Box>
                     </Grid>
                 ))}
-            </Grid>
+                </Grid>
 
             {/* Selected Day Information */}
             {selectedDate && (
@@ -390,7 +390,7 @@ const Calendar: React.FC<CalendarProps> = ({ mobileView = false }) => {
                     }}
                 >
                     <Typography
-                        sx={{
+                sx={{
                             fontFamily: 'poppins',
                             fontWeight: 600,
                             fontSize: { xs: '0.8rem', sm: '0.85rem', md: '0.9rem' },

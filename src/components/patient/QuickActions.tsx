@@ -31,8 +31,8 @@ const QuickActions: React.FC<QuickActionsProps> = ({ mobileView = false }) => {
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
-                        width: 40,
-                        height: 40,
+                        width: { xs: 32, sm: 36, md: 40 },
+                        height: { xs: 32, sm: 36, md: 40 },
                         borderRadius: '50%',
                         backgroundColor: mode === 'light' ? '#F0F8FB' : '#333',
                     }}
@@ -53,8 +53,8 @@ const QuickActions: React.FC<QuickActionsProps> = ({ mobileView = false }) => {
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
-                        width: 40,
-                        height: 40,
+                        width: { xs: 32, sm: 36, md: 40 },
+                        height: { xs: 32, sm: 36, md: 40 },
                         borderRadius: '50%',
                         backgroundColor: mode === 'light' ? '#F0F8FB' : '#333',
                     }}
@@ -76,14 +76,14 @@ const QuickActions: React.FC<QuickActionsProps> = ({ mobileView = false }) => {
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
-                        width: 40,
-                        height: 40,
+                        width: { xs: 32, sm: 36, md: 40 },
+                        height: { xs: 32, sm: 36, md: 40 },
                         borderRadius: '50%',
                         backgroundColor: mode === 'light' ? '#F0F8FB' : '#333',
                     }}
                 >
                     <svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M21 2.42942C21 1.04053 19.6191 0.0744902 18.3144 0.550601L11.0165 3.21371L3.68817 3.78675C1.60632 3.94954 0 5.68638 0 7.77457V9.22543C0 11.3136 1.60633 13.0505 3.68817 13.2133L4.10077 13.2455L4.80448 19.3589C4.97774 20.864 6.25202 22 7.76707 22C9.55425 22 10.9401 20.4388 10.7282 18.6643L10.1375 13.7176L11.0165 13.7863L18.3144 16.4494C19.6191 16.9255 21 15.9595 21 14.5706V2.42942ZM3.84408 5.78066L10.2308 5.28125V11.7188L3.84409 11.2193C2.80316 11.1379 2 10.2695 2 9.22543V7.77457C2 6.73047 2.80316 5.86206 3.84408 5.78066ZM19 14.5706L12.2308 12.1004V4.89959L19 2.42942L19 14.5706ZM6.79136 19.1302L6.13226 13.4044L8.10431 13.5586L8.7423 18.9014C8.81209 19.4858 8.35567 20 7.76707 20C7.2681 20 6.84842 19.6259 6.79136 19.1302Z" fill="#21647D" />
+                        <path fillRule="evenodd" clipRule="evenodd" d="M21 2.42942C21 1.04053 19.6191 0.0744902 18.3144 0.550601L11.0165 3.21371L3.68817 3.78675C1.60632 3.94954 0 5.68638 0 7.77457V9.22543C0 11.3136 1.60633 13.0505 3.68817 13.2133L4.10077 13.2455L4.80448 19.3589C4.97774 20.864 6.25202 22 7.76707 22C9.55425 22 10.9401 20.4388 10.7282 18.6643L10.1375 13.7176L11.0165 13.7863L18.3144 16.4494C19.6191 16.9255 21 15.9595 21 14.5706V2.42942ZM3.84408 5.78066L10.2308 5.28125V11.7188L3.84409 11.2193C2.80316 11.1379 2 10.2695 2 9.22543V7.77457C2 6.73047 2.80316 5.86206 3.84408 5.78066ZM19 14.5706L12.2308 12.1004V4.89959L19 2.42942L19 14.5706ZM6.79136 19.1302L6.13226 13.4044L8.10431 13.5586L8.7423 18.9014C8.81209 19.4858 8.35567 20 7.76707 20C7.2681 20 6.84842 19.6259 6.79136 19.1302Z" fill="#21647D" />
                     </svg>
                 </Box>
             ),
@@ -99,7 +99,16 @@ const QuickActions: React.FC<QuickActionsProps> = ({ mobileView = false }) => {
     };
 
     return (
-        <Box>
+        <Box sx={{ 
+            mb: { xs: 3, sm: 3.5, md: 4 },
+            ...(mobileView && {
+                backgroundColor: mode === 'light' ? '#ffffff' : '#2B2B2B',
+                borderRadius: '12px',
+                p: { xs: 1.5, sm: 2 },
+                boxShadow: mode === 'light' ? '0 2px 8px rgba(0,0,0,0.05)' : 'none',
+                border: mode === 'light' ? '1px solid #EEF1F4' : '1px solid #333',
+            })
+        }}>
             <Typography
                 variant="h6"
                 sx={{
@@ -107,8 +116,8 @@ const QuickActions: React.FC<QuickActionsProps> = ({ mobileView = false }) => {
                     fontFamily: 'poppins',
                     color: mode === 'light' ? '#000000' : '#FFFFFF',
                     fontWeight: 600,
-                    fontSize: '1.25rem',
-                    mb: 2,
+                    fontSize: { xs: '1.1rem', sm: '1.2rem', md: '1.25rem' },
+                    mb: { xs: 1.5, sm: 2 },
                     pb: 0.5,
                     '&:after': {
                         content: '""',
@@ -130,7 +139,7 @@ const QuickActions: React.FC<QuickActionsProps> = ({ mobileView = false }) => {
                     width: '100%',
                     bgcolor: mode === 'light' ? 'background.paper' : '#2B2B2B',
                     border: mode === 'light' ? '1px solid #EEF1F4' : '1px solid #333',
-                    borderRadius: '15px',
+                    borderRadius: { xs: '12px', sm: '15px' },
                     overflow: 'hidden',
                     boxShadow: mode === 'light' ? '0 2px 4px rgba(0,0,0,0.02)' : 'none',
                 }}
@@ -142,16 +151,17 @@ const QuickActions: React.FC<QuickActionsProps> = ({ mobileView = false }) => {
                             onMouseEnter={() => handleMouseEnter(action.id)}
                             onMouseLeave={handleMouseLeave}
                             sx={{
-                                py: 2,
-                                px: 2.5,
+                                py: { xs: 1.5, sm: 1.75, md: 2 },
+                                px: { xs: 1.5, sm: 2, md: 2.5 },
                                 transition: 'all 0.2s ease',
                                 transform: activeAction === action.id ? 'translateX(5px)' : 'translateX(0)',
                                 '&:hover': {
                                     backgroundColor: mode === 'light' ? 'rgba(33, 100, 125, 0.05)' : 'rgba(255, 255, 255, 0.05)',
                                 },
+                                minHeight: { xs: '60px', sm: 'auto' },
                             }}
                         >
-                            <ListItemIcon sx={{ minWidth: 56, mt: 0 }}>
+                            <ListItemIcon sx={{ minWidth: { xs: 45, sm: 50, md: 56 }, mt: 0 }}>
                                 {action.icon}
                             </ListItemIcon>
                             <ListItemText
@@ -160,32 +170,35 @@ const QuickActions: React.FC<QuickActionsProps> = ({ mobileView = false }) => {
                                 primaryTypographyProps={{
                                     fontWeight: 600,
                                     color: mode === 'light' ? '#21647D' : '#B8C7CC',
-                                    fontSize: '0.95rem',
+                                    fontSize: { xs: '0.85rem', sm: '0.9rem', md: '0.95rem' },
                                     fontFamily: 'poppins',
-                                    mb: 0.5
+                                    mb: 0.5,
+                                    lineHeight: { xs: 1.2, sm: 1.3 }
                                 }}
                                 secondaryTypographyProps={{
                                     color: mode === 'light' ? '#6C7A89' : '#888',
-                                    fontSize: '0.8rem',
-                                    fontFamily: 'poppins'
+                                    fontSize: { xs: '0.75rem', sm: '0.775rem', md: '0.8rem' },
+                                    fontFamily: 'poppins',
+                                    lineHeight: { xs: 1.2, sm: 1.3 }
                                 }}
                             />
                             <Box
                                 sx={{
-                                    ml: 1,
+                                    ml: { xs: 0.5, sm: 1 },
                                     alignSelf: 'center',
                                     color: mode === 'light' ? '#21647D' : '#B8C7CC',
                                     transition: 'transform 0.2s ease',
                                     transform: activeAction === action.id ? 'translateX(5px)' : 'translateX(0)',
+                                    display: 'flex'
                                 }}
                             >
-                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                <svg xmlns="http://www.w3.org/2000/svg" width={mobileView ? "16" : "18"} height={mobileView ? "16" : "18"} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                                     <polyline points="9 18 15 12 9 6"></polyline>
                                 </svg>
                             </Box>
                         </ListItemButton>
                         {index < actions.length - 1 && (
-                            <Box sx={{ mx: 2.5 }}>
+                            <Box sx={{ mx: { xs: 1.5, sm: 2, md: 2.5 } }}>
                                 <Box sx={{ height: '1px', backgroundColor: mode === 'light' ? '#EEF1F4' : '#333' }} />
                             </Box>
                         )}
