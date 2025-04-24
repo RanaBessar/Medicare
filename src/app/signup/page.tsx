@@ -253,8 +253,10 @@ const SignUpPage = () => {
     const { setDirection } = useAnimation();
 
     const handleLoginClick = () => {
-        setDirection('right');
+        setDirection('right'); // Set animation direction
+        setTimeout(() => {
         router.push('/login');
+        }, 100); // Small delay to ensure animation starts before navigation
     };
 
     // Animation variants for the white circle
@@ -385,6 +387,7 @@ const SignUpPage = () => {
                         To keep connected with us please <br /> login with your personal info
                     </WelcomeText>
                     <LoginButton
+                        onClick={handleLoginClick}
                         disableRipple
                         initial="initial"
                         animate="animate"
@@ -393,7 +396,6 @@ const SignUpPage = () => {
                     >
                         Log In
                     </LoginButton>
-          
                 </WelcomeSection>
             </PageContainer>
         </PageTransition>

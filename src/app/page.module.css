@@ -131,7 +131,7 @@
     z-index: 2;
     box-shadow: 0px 64px 26px rgba(0, 0, 0, 0.01), 0px 36px 22px rgba(0, 0, 0, 0.05), 0px 16px 16px rgba(0, 0, 0, 0.09), 0px 4px 9px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
-    
+
 }
 
 .get-started-btn:hover {
@@ -235,12 +235,11 @@
 
 .learn-more-container {
     margin-top: 2rem;
-   
+    max-height: 5px;
 }
 
 .learn-more-btn {
-    width: 150px;
-    /* padding: 0.3rem 1.2rem; */
+    padding: 0.5rem 1.5rem;
     background: white;
     border: 1px solid #2085A5;
     border-radius: 50px;
@@ -515,14 +514,25 @@
     z-index: 2;
 }
 
-/* Icon Circles */
-.medkit-circle,
-.heart-circle,
-.record-circle,
-.pulse-circle,
-.radio-circle,
-.contacts-circle {
+.circle-small {
+    box-sizing: border-box;
     position: absolute;
+    width: 400px;
+    height: 300px;
+    left: 250px;
+    top: 100px;
+    border-radius: 50%;
+    z-index: 4;
+}
+
+/* Icon Circles */
+.medkit-circle {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    top: -116px;
+    left: 210px;
+    background: #4CAF50;
     border: 8px solid #FFFFFF;
     box-shadow: 0px 3px 49px 9px rgba(0, 0, 0, 0.06);
     border-radius: 50%;
@@ -530,61 +540,123 @@
     align-items: center;
     justify-content: center;
     z-index: 10;
-    padding: 15px;
-}
-
-.medkit-circle {
-    width: 110px;
-    height: 110px;
-    top: -116px;
-    left: 210px;
-    background: #4CAF50;
 }
 
 .heart-circle {
+    position: absolute;
     width: 60px;
     height: 60px;
     right: 245px;
     top: 100px;
     background: #F42E88;
-    padding: 10px;
+    border: 8px solid #FFFFFF;
+    box-shadow: 0px 3px 49px 9px rgba(0, 0, 0, 0.06);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
 }
 
 .record-circle {
+    position: absolute;
     width: 85px;
     height: 85px;
     right: 165px;
     top: 230px;
     background: #217C99;
-    padding: 12px;
+    border: 8px solid #FFFFFF;
+    box-shadow: 0px 3px 49px 9px rgba(0, 0, 0, 0.06);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
 }
 
 .pulse-circle {
+    position: absolute;
     width: 170px;
     height: 170px;
     right: 140px;
     bottom: -195px;
     background: #F42E88;
-    padding: 25px;
+    border: 8px solid #FFFFFF;
+    box-shadow: 0px 3px 49px 9px rgba(0, 0, 0, 0.06);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
 }
 
 .radio-circle {
+    position: absolute;
     width: 95px;
     height: 95px;
     right: 450px;
     top: 578px;
     background: #217C99;
     border: 6px solid #FFFFFF;
-    padding: 15px;
+    box-shadow: 0px 3px 49px 9px rgba(0, 0, 0, 0.06);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
 }
 
 .contacts-circle {
+    position: absolute;
     width: 80px;
     height: 80px;
     left: -60px;
     bottom: -30px;
     background: #F42E88;
-    padding: 12px;
+    border: 8px solid #FFFFFF;
+    box-shadow: 0px 3px 49px 9px rgba(0, 0, 0, 0.06);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+/* Icons */
+.medkit-icon {
+    width: 50px;
+    height: 50px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23FFFFFF'%3E%3Cpath d='M20 6h-4V4c0-1.1-.9-2-2-2h-4c-1.1 0-2 .9-2 2v2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zM10 4h4v2h-4V4zm6 11h-3v3h-2v-3H8v-2h3V9h2v4h3v2z'/%3E%3C/svg%3E") no-repeat center center;
+}
+
+.heart-icon {
+    width: 25px;
+    height: 25px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23FFFFFF'%3E%3Cpath d='M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z'/%3E%3C/svg%3E") no-repeat center center;
+}
+
+.record-icon {
+    width: 35px;
+    height: 35px;
+    background: url("/images/record.svg") no-repeat center center;
+}
+
+.pulse-icon {
+    width: 123px;
+    height: 123px;
+    background: url("/images/pulse-image.svg") no-repeat center center;
+}
+
+.radio-icon {
+    width: 60px;
+    height: 60px;
+    background: url("/images/radio-image.svg") no-repeat center center;
+}
+
+.contacts-icon {
+    width: 35px;
+    height: 35px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23FFFFFF'%3E%3Cpath d='M12 6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2m0 10c2.7 0 5.8 1.29 6 2H6c.23-.72 3.31-2 6-2m0-12C9.79 4 8 5.79 8 8s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 10c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z'/%3E%3C/svg%3E") no-repeat center center;
 }
 
 .facilities-content {
@@ -610,17 +682,18 @@
     font-weight: 300;
 }
 
-.medkit-circle svg,
-.heart-circle svg,
-.record-circle svg,
-.pulse-circle svg,
-.radio-circle svg,
-.contacts-circle svg {
-    width: 100%;
-    height: 100%;
+.learn-more-btn {
+    padding: 0.5rem 1.5rem;
+    background: white;
+    border: 1px solid #2085A5;
+    border-radius: 50px;
+    color: #2085A5;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: inline-block;
 }
 
-/* Responsive styles for facilities section */
 @media (max-width: 1200px) {
     .facilities-section {
         padding: 5rem 1rem 8rem;
@@ -632,7 +705,8 @@
     }
 
     .facilities-graphic-container {
-        display: none; /* Hide circles on medium and mobile */
+        display: none;
+        /* Hide circles on medium and mobile */
     }
 
     .facilities-content {
@@ -692,6 +766,7 @@
 @media (max-width: 480px) {
     .facilities-section {
         padding: 2.5rem 0.5rem 3rem;
+        margin-top: 4rem;
     }
 
     .facilities-content h2 {

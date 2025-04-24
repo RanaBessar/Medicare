@@ -7,7 +7,6 @@ import styles from './page.module.css';
 import Logo from '../components/common/Logo';
 import { Box, Button, Typography } from '@mui/material';
 import { styled } from '@mui/material/styles';
-import { MedkitIcon, HeartIcon, RecordIcon, PulseIcon, RadioIcon, ContactsIcon } from '../components/icons/MedicalIcons';
 
 // Styled components for buttons matching signup page style
 const PrimaryButton = styled(Button)({
@@ -36,28 +35,15 @@ const PrimaryButton = styled(Button)({
         transform: 'translateY(1px)',
     },
     '@media (max-width: 1400px)': {
-        width: '170px',
-        height: '45px',
-        fontSize: '18px',
+        width: '280px',
+        height: '65px',
+        fontSize: '22px',
         lineHeight: '33px',
     },
     '@media (max-width: 1200px)': {
-        width: '160px',
-        height: '40px',
-        fontSize: '16px',
-
-        lineHeight: '30px',
-    },
-    '@media (max-width: 900px)': {
-        width: '150px',
-        height: '25px',
-        fontSize: '16px',
-        lineHeight: '30px',
-    },
-    '@media (max-width: 600px)': {
-        width: '180px',
-        height: '50px',
-        fontSize: '15px',
+        width: '260px',
+        height: '60px',
+        fontSize: '20px',
         lineHeight: '30px',
     },
 });
@@ -88,29 +74,15 @@ const SecondaryButton = styled(Button)({
         transform: 'translateY(1px)',
     },
     '@media (max-width: 1400px)': {
-        width: '170px',
-        height: '45px',
-        fontSize: '18px',
+        width: '280px',
+        height: '65px',
+        fontSize: '22px',
         lineHeight: '33px',
     },
     '@media (max-width: 1200px)': {
-        width: '160px',
-        height: '40px',
-        fontSize: '16px',
-
-        lineHeight: '30px',
-    },
-    '@media (max-width: 900px)': {
-        width: '140px',
-        height: '25px',
-        fontSize: '16px',
-       
-        lineHeight: '30px',
-    },
-       '@media (max-width: 600px)': {
-        width: '180px',
-        height: '50px',
-        fontSize: '15px',
+        width: '260px',
+        height: '60px',
+        fontSize: '20px',
         lineHeight: '30px',
     },
 });
@@ -431,32 +403,32 @@ const LandingPage = () => {
 
                         {/* Medical Kit Icon - Green */}
                         <div className={styles['medkit-circle']}>
-                            <MedkitIcon />
+                            <div className={styles['medkit-icon']}></div>
                         </div>
 
                         {/* Heart Icon - Pink */}
                         <div className={styles['heart-circle']}>
-                            <HeartIcon />
+                            <div className={styles['heart-icon']}></div>
                         </div>
 
                         {/* Apple/Baby Icon - Blue */}
                         <div className={styles['record-circle']}>
-                            <RecordIcon />
+                            <div className={styles['record-icon']}></div>
                         </div>
 
                         {/* Pulse Icon - Pink */}
                         <div className={styles['pulse-circle']}>
-                            <PulseIcon />
+                            <div className={styles['pulse-icon']}></div>
                         </div>
 
                         {/* Sound/Radio Icon - Green */}
                         <div className={styles['radio-circle']}>
-                            <RadioIcon />
+                            <div className={styles['radio-icon']}></div>
                         </div>
 
                         {/* Contacts Icon - Pink */}
                         <div className={styles['contacts-circle']}>
-                            <ContactsIcon />
+                            <div className={styles['contacts-icon']}></div>
                         </div>
                     </div>
 
